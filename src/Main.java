@@ -3,10 +3,10 @@ import house.House;
 public class Main {
     public static void main(String[] args) {
 
-      createHouses();
+        createHouses();
     }
 
-    public static void createHouses(){
+    public static void createHouses() {
 
         //default constructor with dot notation
         House house1 = new House();
@@ -16,17 +16,34 @@ public class Main {
         house1.setPrice(200000);
         house1.setNumberOfRooms(4);
         house1.setGarage(true);
-        System.out.println(house1.message());
+        message(house1);
 
         house2.setHouseType("Detached");
         house2.setPrice(400000);
         house2.setNumberOfRooms(7);
         house2.setGarage(false);
-        System.out.println(house2.message());
+       message(house2);
+
 
 
         //Constructor
-        House house3 = new House(4,4000,"terraced",true);
-        System.out.println(house3.message());
+        House house3 = new House(4, 4000, "terraced", true);
+        message(house3);
+
+        //chaining
+        House house4 = new House("detached", true);
+        message2(house4);
+
+
     }
+    public static void message2(House param) {
+        String result = "house of type:" + param.getHouseType() + " " + "costs:" + " " + param.getPrice();
+        System.out.println(result);
+    }
+
+    public static void message(House param) {
+        System.out.println( "House type has" + " " + param.getNumberOfRooms() + " " + "rooms" + " " + "and its current price is" + " " + param.getPrice());
+    }
+
+
 }

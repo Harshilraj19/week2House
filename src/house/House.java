@@ -1,19 +1,10 @@
 package house;
 
 public class House {
-
-    // Constructor
-    public House(int numberOfRooms, int price, String houseType, boolean garage){
-        this.numberOfRooms = numberOfRooms;
-        this.houseType = houseType;
-        this.garage=garage;
-        this.price = price;
-    }
-
     public  House(){
 
     }
-    private int numberOfRooms;
+    private  int numberOfRooms;
     private boolean garage;
     private String houseType;
     private int price;
@@ -54,12 +45,30 @@ public class House {
         this.garage = garage;
     }
 
-    public String message() {
-        return "House type has" + " " + getNumberOfRooms() + " " + "and its current price is" + " " + getPrice();
+
+
+    // Constructor
+    public House(int numberOfRooms, int price, String houseType, boolean garage){
+        this.numberOfRooms = numberOfRooms;
+        this.houseType = houseType;
+        this.garage=garage;
+        this.price = price;
+
+
+        }
+    public House(String houseType, boolean garage) {
+        this(0,0,houseType,garage);
     }
 
 
-}
+    }
+
+
+
+
+
+
+
 
 
 
