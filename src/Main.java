@@ -7,6 +7,8 @@ public class Main {
     }
 
     public static void createHouses(){
+
+        //default constructor with dot notation
         House house1 = new House();
         House house2 = new House();
 
@@ -22,6 +24,8 @@ public class Main {
         house2.setGarage(false);
         System.out.println(house2.message());
 
+
+        //Constructor
         House house3 = new House(4,4000,"terraced",true);
         System.out.println(house3.message());
     }
