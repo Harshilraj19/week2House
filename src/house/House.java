@@ -8,6 +8,7 @@ public class House {
     private boolean garage;
     private String houseType;
     private int price;
+    private  static  String location = "UK";
 
     //House type
     public String getHouseType() {
@@ -26,6 +27,16 @@ public class House {
     public void setNumberOfRooms(int numberOfRooms) {
         this.numberOfRooms = numberOfRooms;
     }
+
+    //location
+    public static String getLocation() {
+        return location;
+    }
+
+    public static void setLocation(String location) {
+        House.location = location;
+    }
+
 
     //House price
     public int getPrice() {
@@ -56,6 +67,8 @@ public class House {
 
 
         }
+
+        //chaining
     public House(String houseType, boolean garage) {
         this(0,0,houseType,garage);
     }

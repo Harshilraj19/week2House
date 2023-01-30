@@ -37,7 +37,8 @@ public class Main {
 
     }
     public static void message2(House param) {
-        String result = "house of type:" + param.getHouseType() + " " + "costs:" + " " + param.getPrice();
+
+        String result = "house of type:" + param.getHouseType() + " " + (param.isGarage()?" with garage" :" with no garage") + " " + "location" + " " + House.getLocation();
         System.out.println(result);
     }
 
@@ -47,3 +48,5 @@ public class Main {
 
 
 }
+
+
